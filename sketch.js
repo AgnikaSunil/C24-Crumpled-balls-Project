@@ -22,15 +22,6 @@ function draw(){
     Engine.update(engine);
 
     text(mouseX+","+mouseY,200,200);
-    ground.display();
-    binPart1.display();
-    binPart2.display();
-    binPart3.display();
-    crumpledPaper.display();
-    
-
-    keyPressed();
-
     fill("Aqua");
     textSize(40);
     text("CRUMPLED BALLS -1",385,40);
@@ -38,11 +29,15 @@ function draw(){
     fill("Magenta");
     textSize(20);
     text("Press the up arrow key to throw the crumpled ball into the dustbin",300,100);
-    console.log(crumpledPaper);
+    ground.display();
+    crumpledPaper.display();
+    binPart1.display();
+    binPart2.display();
+    binPart3.display();   
 }
 
 function keyPressed(){
     if(keyCode === UP_ARROW){
-        Matter.Body.applyForce(crumpledPaper.body,crumpledPaper.body.position,{x:19,y:-5});
+        Matter.Body.applyForce(crumpledPaper.body,crumpledPaper.body.position,{x:90,y:-90});
     }
 }

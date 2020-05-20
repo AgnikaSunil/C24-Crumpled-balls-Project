@@ -1,7 +1,8 @@
 class Paper{
     constructor(){
         var options ={
-            restitution :0.2,
+            isStatic :false,
+            restitution :0.05,
             friction :0.5,
             density :1.2
         }
@@ -11,8 +12,10 @@ class Paper{
     }
     display(){
         var pos = this.body.position;
+        var angle = this.body.angle;
         fill("white");
+        rotate(angle);
         ellipseMode(RADIUS);
-        ellipse(pos.x,pos.y,this.radius,this.height);
+        ellipse(pos.x,pos.y,this.radius,this.radius);
     }
 }
