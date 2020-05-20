@@ -21,7 +21,8 @@ function draw(){
     background(0);
     Engine.update(engine);
 
-    text(mouseX+","+mouseY,200,200);
+    //text(mouseX+","+mouseY,200,200);
+    
     fill("Aqua");
     textSize(40);
     text("CRUMPLED BALLS -1",385,40);
@@ -29,6 +30,7 @@ function draw(){
     fill("Magenta");
     textSize(20);
     text("Press the up arrow key to throw the crumpled ball into the dustbin",300,100);
+    
     ground.display();
     crumpledPaper.display();
     binPart1.display();
